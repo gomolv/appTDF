@@ -36,9 +36,6 @@ export default class Stock extends Component{
     
     render() {        
         var total = 0;
-        console.log("COMPONENTE STOCK");
-        console.log( this.props.stock);
-        console.log("-------------------");
         (this.props.stock != null ? console.log("1") : console.log("2")
         )
         return(

@@ -13,7 +13,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './app/views/login';
 import Home from './app/views/home';
 import Welcome from './app/views/welcome'
-import Transfer from './app/views/transfer';
 import type {Node} from 'react';
 import MenuWelcome from './app/components/menuWelcome';
 import Menu from './app/components/menu';
@@ -64,7 +63,6 @@ const App: () => Node = () => {
         <Stack.Screen name="Home" component={Home} options={{title: "Home", headerShown: false}} />
       <Stack.Screen name="MenuWelcome" component={MenuWelcome} options={{title: "MenuWelcome", headerShown: false}} />
       <Stack.Screen name="Menu" component={Menu} options={{title: "Menu", headerShown: false}} />
-      <Stack.Screen name="Transfer" component={Transfer} options={{title: "Transfer", headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
     );

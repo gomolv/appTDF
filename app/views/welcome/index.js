@@ -34,6 +34,12 @@ class Stores extends Component {
     componentDidMount() {
         this.getStores();
     }
+    async getStock(code) {
+        var stock = null;
+        return await axios.get(Settings.url + `/product/inStore?code=` + code).then((response) => {
+            this.setState({ stock: response.data.products })
+        });
+    }
 
     render() {
         return (

@@ -57,7 +57,7 @@ export default class AdminStock extends Component {
                                     <Image source={require("./../../assets/fruitmark.png")} alt="Fruitamrk AppStore" key="fruitmark" />
                                 </View>
                                 <View style={styles.View1}  >
-                                    <Text fontSize="lg" fontWeight="bold" color="green.600" >Welcome, Choose a store to display the Stock</Text>
+                                    <Text fontSize="lg" fontWeight="bold" color="green.600" >Welcome, Mr. Menjour. Choose a store to display the Stock</Text>
                                 </View>
                             </View> :
                             (
@@ -167,12 +167,12 @@ export default class AdminStock extends Component {
                                 <Box h="100%" w="40%" >{(this.state.fruit != null ? this.getImage(this.state.fruit.image) : "")}</Box>
                                 <Box h="100%" w="60%"   >
                                     <Text fontSize="2xl" fontWeight="bold" color="orange.500" >{(this.state.fruit != null ? this.state.fruit.name : "")}</Text>
-                                    <Badge width="68%"  >{(this.state.fruit != null ? this.state.fruit.inStock + " in stock" : "")}</Badge>
+                                    <Badge width="75%"  >{(this.state.fruit != null ? this.state.fruit.inStock + " pieces in stock" : "")}</Badge>
                                 </Box>
                             </HStack>
 
                             <FormControl style={{ marginTop: 25 }} >
-                                <Text fontSize="lg" fontWeight="bold" color="green.500" >From: {this.from != null ? this.from.city.name + ", " + this.from.city.cp : ""}</Text>
+                                <Text fontSize="lg" fontWeight="bold" color="green.500" >From: {this.from != null ? this.from.city.name + ", P.C. " + this.from.city.cp : ""}</Text>
                                 <Text fontSize="lg" style={{ marginTop: 25 }} fontWeight="semibold" >Choose the store to transfer: </Text>
                                 <Select placeholder="Choose a store" key="chooseTO"
                                     accesinilityLabel="Chose a store" onValueChange={(val) => { this.to = val, this.validate(); }}
